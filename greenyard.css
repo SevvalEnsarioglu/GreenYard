@@ -1,0 +1,350 @@
+
+/*Sayfadaki tüm içeriği saran bir ana container oluşturuyor. 
+Bu container, sayfadaki tüm öğeleri düzenlemek için kullanılacak*/
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d0edd9; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+ 
+header {
+  background-color: #d0edd9; /* Menü arkaplan rengi */
+  padding: 10px; /* Menü içeriklerinden arkaplan ile içerik arasındaki boşluk */
+  position: fixed; /* Menüyü sabitle */
+  top: 0; /* Sayfanın üst kısmına sabitle */
+  width: 100%; /* Sayfanın genişliği kadar uzat */
+  z-index: 1000; /* Diğer elemanlardan üstte göster */
+}
+
+.sevval{
+  align-items: center;
+  margin: auto;
+  max-width: max-content;
+  display: flex; /* İçerikleri yatay düzende sırala */
+  justify-content: space-between; /* İçerikleri arasında boşluk bırakarak hizala */
+}
+
+.header-button {
+  padding: 15px 20px; /* Buton boyutlarını ayarla */
+  margin-right: 10px; /* Elementler arasına sağ taraftan boşluk ekle */
+  text-decoration: none;
+  color: #fff; /* Metin rengi */
+  border: none;
+  background: transparent; /* Arka plan rengini transparent yap */
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown-button::after {
+  content: ""; /* Boş içerik ekleyerek ::after kullanımını etkinleştir */
+  display: block;
+  border-bottom: 3px solid transparent; /* Alt çizgiyi şeffaf yap */
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  transition: width 0.3s ease; /* Geçiş efekti ekleyerek alt çizgi animasyonu */
+}
+
+.dropdown-button:hover::after {
+  width: 100%; /* Hover durumunda alt çizgiyi genişlet */
+  border-bottom: 3px solid #fff; /* Alt çizgi rengi */
+}
+
+.header-button {
+  padding: 15px 20px; /* Buton boyutlarını ayarla */
+  margin-right: 10px; /* Elementler arasına sağ taraftan boşluk ekle */
+  text-decoration: none;
+  color: #05280f; /* Metin rengi */
+  border: none;
+  background: transparent; /* Arka plan rengini transparent yap */
+  cursor: pointer;
+  position: relative;
+  display: inline-block; /* Elementleri satır içi blok olarak düzenle */
+}
+
+.dropdown-button::after {
+  content: ""; /* Boş içerik ekleyerek ::after kullanımını etkinleştir */
+  display: block;
+  border-bottom: 3px solid transparent; /* Alt çizgiyi şeffaf yap */
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  transition: width 0.3s ease; /* Geçiş efekti ekleyerek alt çizgi animasyonu */
+}
+
+.dropdown-button:hover::after {
+  width: 100%; /* Hover durumunda alt çizgiyi genişlet */
+  border-bottom: 3px solid #05280f; /* Alt çizgi rengi */
+}
+
+.header-button {
+  font-size: 18px; /* İstenilen boyutu belirle */
+  /* Diğer stillendirmeler */
+}
+
+/* Dropdown içindeki bağlantılar için */
+.dropdown-content a {
+  font-size: 14px; /* İstenilen boyutu belirle */
+  /* Diğer stillendirmeler */
+}
+
+@media screen and (max-width: 600px) {
+  /* 600 pikselden küçük ekranlar için stil tanımlamaları */
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* 601-1024 piksel arası ekranlar için stil tanımlamaları */
+}
+
+@media screen and (min-width: 1025px) {
+  /* 1025 pikselden büyük ekranlar için stil tanımlamaları */
+}
+.sevval {
+  display: flex;
+  flex-direction: row; /* Yatay düzen */
+  justify-content: space-between; /* Aralara boşluk bırakarak hizala */
+  align-items: center; /* Dikeyde ortala */
+}
+
+
+
+/* Diğer stillendirmeler */
+
+
+/*HAKKINDA - ÜRÜNLERİMİZ DROP*/
+
+
+.dropbtn {
+  background-color: #128112;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+  
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+  
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+  
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}  
+
+.sevval img {
+  width: 80px; /* İstenilen logo boyutu */
+}
+
+.dropbtn {
+  padding: 12px 20px; /* Buton boyutu */
+}
+
+
+  
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #128112;}
+
+/*RESİM KAYDIRMA*/
+
+.slideshow-container {
+  max-width: 70%;
+  position: relative;
+  margin: auto;
+  max-width: max-content;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width:100%;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(49, 71, 54, 0.8);
+}
+
+.yazi {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #87ce9b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(5, 46, 16);
+  max-width: 70%;
+  margin: auto;  
+}
+
+.title {
+  color: #128112;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.downbox{
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #05280f;
+  box-shadow: 0 0 10px #05280f;
+  font-family:Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  max-width: 70%;
+  margin: auto;
+}
+
+.social-media-link {
+  display: inline-block;
+  text-align: center;
+}
+
+.social-media-link img {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*tarihce class*/
+
+
+/* Genel Body Stili */
+.form-container {
+  background-color: #87ce9b;
+  padding: 29-0px;
+  border-radius: 10px;
+  
+}
+
+.form-title {
+  text-align: center;
+  color: #05280f;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #05280f;
+}
+
+.form-input,
+.form-textarea,
+.form-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.form-button {
+  background-color: #128112;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #128112;
+}
+form {
+  max-width: 400px;
+  margin: auto;
+}
+
+
+.custom-form {
+  font-family: Arial, sans-serif;
+  background-color: #87ce9b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 400px; /* veya istediğiniz darlıkta bir değer */
+  margin: auto; /* ortalamak için */
+
+}
+
+.custom-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.custom-form select,
+.custom-form button {
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.custom-form select {
+  background-color: #FFF;
+  border: 1px solid 87ce9b;
+  border-radius: 5px;
+  width: calc(100% - 22px);
+  /* İkon için boşluk bırakmak için */
+  appearance: none;
+  /* tarayıcı varsayılan oku gizleme */
+  background-image: url('drop-icon.png');
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+}
+
+.custom-form button {
+  background-color: #128112;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-form button:hover {
+  background-color: #45a049;
+}
+
+.custom-form #result {
+  font-size: 18px;
+  font-weight: bold;
+  color: #05280f;
+  text-align: center;
+}
+
